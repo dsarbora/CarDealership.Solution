@@ -1,0 +1,15 @@
+@using Dealership.Models;
+
+<h1>A list of all our cars!</h1>
+
+@foreach (Car car in Model)
+{
+    <ul>
+        <li>Make and Model: @car.GetMakeModel()</li>
+        <li>Price $@car.GetPrice()</li>
+        <li>Miles: @car.GetMiles()</li>
+    </ul>
+    <p>---------------------------------</p>
+}
+
+<a href="/">Add another car to your inventory.</a>
